@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  genie_tts:
+    image: genie_tts:latest
+    container_name: genie_tts
+    restart: unless-stopped
+    ports:
+      - "9999:9999"
+    volumes:
+      - ./models:/models      # 挂载当前目录到容器
